@@ -415,6 +415,41 @@ nav {
     font-weight: 400;
 }
 
+.tool-button {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover .tool-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tool-item.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tool-item.coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.tool-item.coming-soon::after {
+    display: none;
+}
+
 /* Footer */
 footer {
     background-color: #fafafa;

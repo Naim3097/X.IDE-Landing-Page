@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X.IDE Font Options Showcase</title>
+    
+    <!-- Google Fonts Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Option 1: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Option 2: Space Grotesk + DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Option 3: Rajdhani + Barlow -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Option 4: Outfit (Tesla-like Headers) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 60px 20px;
+            background-color: #f5f5f7; /* Apple-like light grey */
+            color: #1d1d1f; /* Apple-like almost black */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            margin-bottom: 60px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .intro h1 { margin-bottom: 10px; font-weight: 600; }
+        .intro p { color: #86868b; }
+
+        .option-card {
+            background: white;
+            padding: 80px;
+            margin-bottom: 60px;
+            border-radius: 30px; /* Smoother Apple-like radius */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .label {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: #f5f5f7;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #86868b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Common Elements for Demo */
+        h2 {
+            font-size: 56px;
+            line-height: 1.08;
+            margin: 0 0 24px 0;
+            color: #1d1d1f;
+        }
+
+        p {
+            font-size: 21px;
+            line-height: 1.5;
+            margin: 0 0 40px 0;
+            max-width: 680px;
+            color: #424245; /* Apple dark grey */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #0071e3; /* Apple Blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 980px;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background: #0077ed;
+            transform: scale(1.02);
+        }
+
+        .nav-demo {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 60px;
+            font-size: 14px;
+            color: #424245;
+            padding-bottom: 20px;
+        }
+        
+        .nav-demo span.active { color: #1d1d1f; }
+
+        /* --- OPTION 4: Premium Minimalist (Tesla/Apple Vibe) --- */
+        .opt-4 {
+            font-family: 'Inter', sans-serif; /* Body: Clean like Apple's SF Pro */
+        }
+        .opt-4 h2 {
+            font-family: 'Outfit', sans-serif; /* Headers: Geometric like Tesla */
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .opt-4 p {
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        .opt-4 .btn {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+        .opt-4 .nav-demo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        /* --- OPTION 1: Modern SaaS (Inter) --- */
+        .opt-1 {
+            font-family: 'Inter', sans-serif;
+        }
+        .opt-1 h2 {
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        .opt-1 p {
+            font-weight: 400;
+        }
+        .opt-1 .btn {
+            font-weight: 600;
+        }
+        .opt-1 .nav-demo {
+            font-weight: 500;
+        }
+
+        /* --- OPTION 2: Constructed (Space Grotesk + DM Sans) --- */
+        .opt-2 {
+            font-family: 'DM Sans', sans-serif;
+        }
+        .opt-2 h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+        .opt-2 p {
+            font-weight: 400;
+        }
+        .opt-2 .btn {
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        .opt-2 .nav-demo {
+            font-weight: 500;
+        }
+
+        /* --- OPTION 3: Data/Cyber (Rajdhani + Barlow) --- */
+        .opt-3 {
+            font-family: 'Barlow', sans-serif;
+        }
+        .opt-3 h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        .opt-3 p {
+            font-weight: 400;
+        }
+        .opt-3 .btn {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 4px; /* Sharper corners for tech feel */
+        }
+        .opt-3 .nav-demo {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="intro">
+            <h1>Font Selection: Premium Tech</h1>
+            <p>Focusing on the "Tesla/Apple" aesthetic: Minimal, Geometric, Premium.</p>
+        </div>
+
+        <!-- OPTION 4: The Recommendation -->
+        <div class="option-card opt-4">
+            <div class="label">Option 4: Premium Minimalist (Outfit + Inter)</div>
+            
+            <div class="nav-demo">
+                <span class="active">Platform</span>
+                <span>Design Tool</span>
+                <span>Website Builder</span>
+                <span>CMS</span>
+            </div>
+
+            <h2>The Integrated Digital<br>Environment for Growth</h2>
+            <p>Streamline your entire digital workflow. From asset creation to campaign management, X.IDE brings your marketing, design, and content teams together.</p>
+            <a href="#" class="btn">Start Free Trial</a>
+        </div>
+
+        <!-- OPTION 1 -->
+        <div class="option-card opt-1">
+            <div class="label">Option 1: Pure Clean (Inter Only)</div>
+            
+            <div class="nav-demo">
+                <span class="active">Platform</span>
+                <span>Design Tool</span>
+                <span>Website Builder</span>
+                <span>CMS</span>
+            </div>
+
+            <h2>The Integrated Digital<br>Environment for Growth</h2>
+            <p>Streamline your entire digital workflow. From asset creation to campaign management, X.IDE brings your marketing, design, and content teams together.</p>
+            <a href="#" class="btn">Start Free Trial</a>
+        </div>
+
+        <!-- OPTION 2 -->
+        <div class="option-card opt-2">
+            <div class="label">Option 2: Constructed (Space Grotesk + DM Sans)</div>
+            
+            <div class="nav-demo">
+                <span class="active">Platform</span>
+                <span>Design Tool</span>
+                <span>Website Builder</span>
+                <span>CMS</span>
+            </div>
+
+            <h2>The Integrated Digital<br>Environment for Growth</h2>
+            <p>Streamline your entire digital workflow. From asset creation to campaign management, X.IDE brings your marketing, design, and content teams together.</p>
+            <a href="#" class="btn">Start Free Trial</a>
+        </div>
+
+        <!-- OPTION 3 -->
+        <div class="option-card opt-3">
+            <div class="label">Option 3: Data/Cyber (Rajdhani + Barlow)</div>
+            
+            <div class="nav-demo">
+                <span class="active">Platform</span>
+                <span>Design Tool</span>
+                <span>Website Builder</span>
+                <span>CMS</span>
+            </div>
+
+            <h2>The Integrated Digital<br>Environment for Growth</h2>
+            <p>Streamline your entire digital workflow. From asset creation to campaign management, X.IDE brings your marketing, design, and content teams together.</p>
+            <a href="#" class="btn">Start Free Trial</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
